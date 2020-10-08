@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import api from "../utils/Api";
+import api from "../../utils/Api";
+import "./Album.css";
 
 const Album = ({ album, onAlbumClick }) => {
   const [photos, setPhotos] = useState([]);

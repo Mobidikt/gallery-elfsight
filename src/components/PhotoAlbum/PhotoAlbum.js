@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import api from "../utils/Api";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-import { Photo } from "./Photo";
-import Popup from "./Popup";
+import api from "../../utils/Api";
+import { Footer } from "../Footer/Footer";
+import { Header } from "../Header/Header";
+import { Photo } from "../Photo/Photo";
+import Popup from "../Popup/Popup";
+import "./PhotoAlbum.css";
 
 export const PhotoAlbum = ({ album }) => {
   const [photos, setPhotos] = useState([]);
@@ -54,9 +55,7 @@ export const PhotoAlbum = ({ album }) => {
       <Header />
       <h2 className="photos__title">Фотографии альбома {album.title}</h2>
       <div className="photos__list">
-        <Link className="photos__button" to="/">
-          Вернуться к списку албомов
-        </Link>
+        <Link className="photos__button" to="/"></Link>
         {photos.map((photo) => (
           <Photo key={photo.id} photo={photo} onClickPhoto={handleClickPhoto} />
         ))}

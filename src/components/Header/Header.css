@@ -1,0 +1,7 @@
+.header {
+  border-bottom: 1px solid #545454;
+  margin-bottom: 20px;
+}
+.header__title {
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+.notFound {
+  margin: 10%;
+}
+.notFound-note {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 24px;
+}
+.notFound-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.notFound-link:hover {
+  cursor: pointer;
+  color: #545454;
+}

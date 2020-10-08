@@ -1,4 +1,5 @@
 import React from "react";
+import "./Photo.css";
 
 export const Photo = ({ photo, onClickPhoto }) => {
   function handleClick() {
