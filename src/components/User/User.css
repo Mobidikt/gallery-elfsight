@@ -1,0 +1,40 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+  margin-bottom: 30px;
+}
+.user:hover {
+  color: #545454;
+  cursor: pointer;
+}
+
+.user__image {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  margin-bottom: 5px;
+}
+.user__name {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .user {
+    width: 80px;
+  }
+  .user__image {
+    width: 80px;
+    height: 80px;
+  }
+  .user__name {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .user__image {
+    display: none;
+  }
+}

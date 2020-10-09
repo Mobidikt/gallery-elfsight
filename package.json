@@ -1,5 +1,7 @@
 {
   "name": "gallery",
+  "author": "Kirill Mecker",
+  "description": "gallery",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

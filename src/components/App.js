@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import api from "../utils/Api";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Main } from "./Main";
-import { PhotoAlbum } from "./PhotoAlbum";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { MainPage } from "./MainPage/MainPage";
+import { PhotoAlbum } from "./PhotoAlbum/PhotoAlbum";
+import { NotFound } from "./NotFound/NotFound";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -40,7 +41,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
-            <Main
+            <MainPage
               users={users}
               user={user}
               albums={albums}
@@ -51,7 +52,12 @@ function App() {
           <Route path="/album/:albumId">
             <PhotoAlbum album={album} />
           </Route>
-          <Route path="*">404</Route>
+          <Route path="/404">
+            <NotFound />
+          </Route>
+          <Route path="*">
+            <Redirect to="/404" />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>

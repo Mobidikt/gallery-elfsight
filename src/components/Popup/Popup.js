@@ -1,4 +1,5 @@
 import React from "react";
+import "./Popup.css";
 
 function Popup({ photos, image, onClose, isOpen, editImage }) {
   const open = isOpen && "popup_opened";
